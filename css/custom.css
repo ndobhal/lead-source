@@ -372,6 +372,7 @@
 
   #home h1 {
     color: #ffffff;
+    font-size: 2em
   }
 
   #home h3 {
@@ -431,7 +432,13 @@
   .feature-thumb {
     border: 1px solid #f0f0f0;
     padding: 3em;
-    text-align: center;
+    text-align: center; 
+  }
+
+  @media (min-width: 768px) {
+    .feature-thumb {
+      min-height: 401px;
+    }
   }
 
   @media (min-width: 1024px) {
@@ -622,6 +629,12 @@
     text-align: center;
   }
 
+  @media (min-width: 1024px) {
+     #testimonial .item {
+      min-height: 370 px;
+    }
+  }
+
   #services .col-md-4,
   #testimonial .col-md-4 {
     display: block;
@@ -649,8 +662,9 @@
     text-align: center;
   }
 
-  .success-image .fa-trophy {
+  .success-image .fa-quote-left {
     font-size: 20px;
+    color: #4F94CD;
   }
 
   .success-desc h4 {
