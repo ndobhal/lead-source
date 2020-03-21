@@ -33,7 +33,7 @@
       smartSpeed: 1000,
     })
 
-    $('.owl-courses').owlCarousel({
+    $('.owl-services').owlCarousel({
       animateOut: 'fadeOut',
       loop: true,
       autoplayHoverPause: false,
