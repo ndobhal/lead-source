@@ -477,7 +477,7 @@
 
   @media (min-width: 1024px) {
     #about {
-      padding-bottom; inherit;
+      padding-bottom: 50px;
     }
   }
 
