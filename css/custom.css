@@ -472,7 +472,7 @@
   -----------------------------------------*/
 
   #about {
-    padding-bottom; 0;
+    padding-bottom: 0;
   }
 
   @media (min-width: 1024px) {
@@ -546,13 +546,33 @@
       Services             
   -----------------------------------------*/
 
+  #services {
+    background: #efefef;
+  }
+
+  @media (max-width: 1023px) {
+     #services {
+      padding-top: 0;
+    }
+  }
+
   #services .section-title {
     text-align: center;
+    margin-top: 80px;
+  }
+
+  #services .section-title h2 {
+    margin-bottom: 50px;
   }
 
   #services .section-title p{
     width: 75%;
     margin: 0 auto;
+  }
+
+  #services .services-desc {
+    background: #f9f9f9;
+    padding: 50px 15px;
   }
 
   #services .owl-theme .owl-nav {
@@ -574,18 +594,29 @@
     position: relative;
   }
 
-  @media (min-width: 768px) {
-    .services-thumb {
-      min-height: 233px;
+  @media (min-width: 768px) and (max-width: 1023px) {
+     .services-thumb {
+      min-height: 280px;
     }
   }
 
+
   .services-detail {
     padding: 25px 25px 15px 25px;
+    position: relative;
+  }
+
+  .services-detail .fa-square{
+    font-size: 9px;
+    position: absolute;
+    left: -3px;
+    color: #4F94CD;
+    top: 37px;
   }
 
   .services-detail h3 {
     margin: 0 0 2px 0;
+    color: #4F94CD;
   }
 
 
@@ -631,11 +662,11 @@
 
   @media (min-width: 1024px) {
      #testimonial .item {
-      min-height: 370 px;
+      min-height: 370px;
     }
   }
 
-  #services .col-md-4,
+  
   #testimonial .col-md-4 {
     display: block;
     width: 100%;
