@@ -560,6 +560,27 @@
     text-align: center;
   }
 
+  .about-thumb {
+    background: #f9f9f9;
+    position: relative;
+  }
+
+  .about-top {
+    position: relative;
+  }
+
+  .about-image {
+    background: linear-gradient(to right, #202020, #101010);
+  }
+
+  .about-detail {
+    padding: 25px 25px 15px 25px;
+    min-height: 178px;
+  }
+
+  .about-detail h3 {
+    margin: 0 0 2px 0;
+  }
 
 
   /*---------------------------------------
@@ -600,11 +621,6 @@
       Services             
   -----------------------------------------*/
 
-  @media (max-width: 1023px) {
-     #services {
-      padding-top: 0;
-    }
-  }
 
   #services .section-title {
     text-align: center;
@@ -765,7 +781,7 @@
     font-size: 14px;
   }
 
-
+ 
 
   /*---------------------------------------
       CONTACT             
@@ -828,10 +844,15 @@
     margin-top: 20px;
   }
 
+  #contact-form address span{
+    vertical-align: top;
+  }
+
   #contact-form address p{
     display: inline-block;
     margin-left: 10px;
     margin-bottom: 0;
+    width: 90%;
   }
   
 
