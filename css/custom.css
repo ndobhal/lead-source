@@ -277,16 +277,18 @@
 
   .custom-navbar .navbar-brand img{
     width: 50%;
+    max-width: 93px;
   }
 
   @media (min-width: 768px) {
     .custom-navbar .navbar-brand img {
       width: 95%;
+      max-width: none;
     }
   }
 
   .custom-navbar .navbar-nav.navbar-nav-first {
-    margin-left: 8em;
+    margin-left: 6em;
   }
 
   .custom-navbar .navbar-nav.navbar-right {
