@@ -38,13 +38,14 @@
       ]
     })
 
+    // Services carousel
     $('.owl-services').owlCarousel({
       animateOut: 'fadeOut',
       loop: true,
-      autoplayHoverPause: false,
+      autoplayHoverPause: true,
       autoplay: true,
-      smartSpeed: 1000,
-      dots: true,
+      smartSpeed: 2000,
+      dots: false,
       responsiveClass: true,
       responsive: {
         0: {
@@ -56,9 +57,31 @@
         1000: {
           items: 4,
         }
+      },
+      nav: true,
+      navText: [
+          '<i class="fa fa-chevron-left"></i>',
+          '<i class="fa fa-chevron-right"></i>'
+      ]
+    });
+
+    // Services accordion
+    $('.owl-services').on('click','a', function(e){
+      e.preventDefault();
+      let serviceType = $(this).attr('class');
+
+      if(!($(this).parents('.services-wrapper').find($('#'+serviceType)).css('display') === 'block')){
+        $('#services').find('.services-wrapper .service-subpages').slideUp();
+        $(this).parents('.services-wrapper').find($('#'+serviceType)).slideDown('slow');
+        $('html, body').animate({
+          'scrollTop' : $('.accordion-content').offset().top - 110
+        });
+      } else {
+        $(this).parents('.services-wrapper').find($('#'+serviceType)).slideUp('slow'); 
       }
     });
 
+    // Testimonial section
     $('.owl-client').owlCarousel({
       animateOut: 'fadeOut',
       loop: true,
@@ -75,6 +98,23 @@
         }
       }
     });
+
+    // Download section
+    $('.owl-downloads-section').owlCarousel({
+      animateOut: 'fadeOut',
+      items:1,
+      loop:true,
+      dots:false,
+      autoplayHoverPause: false,
+      autoplay: true,
+      smartSpeed: 2000,
+      nav: true,
+      navText: [
+          '<i class="fa fa-chevron-left"></i>',
+          '<i class="fa fa-chevron-right"></i>'
+      ]
+    })
+
 
 
     // SMOOTHSCROLL

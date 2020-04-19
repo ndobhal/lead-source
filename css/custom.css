@@ -47,6 +47,9 @@
     line-height: 24px;
   }
 
+  ul {
+    margin-top: 10px;
+  }
 
 
   /*---------------------------------------
@@ -321,8 +324,8 @@
   .custom-navbar .nav li a {
     line-height: 40px;
     color: #575757;
-    padding-right: 22px;
-    padding-left: 22px;
+    padding-right: 18px;
+    padding-left: 18px;
   }
 
   .custom-navbar .navbar-nav > li > a:hover,
@@ -334,6 +337,13 @@
     .custom-navbar .nav li a:hover {
       background-color: #4F94CD;
       color: #ffffff;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .custom-navbar .nav li a {
+      padding-right: 22px;
+      padding-left: 22px;
     }
   }
 
@@ -373,18 +383,21 @@
     padding: 0;
   }
 
-  #home .fa-chevron-right, #home .fa-chevron-left{
+  #home .fa-chevron-right, #home .fa-chevron-left,
+  #services .fa-chevron-right, #services .fa-chevron-left{
     position: absolute;
     top: 50%;
     color: #fff;
     font-size: 23px;
   }
 
-  #home .fa-chevron-right{
+  #home .fa-chevron-right,
+  #services .fa-chevron-right{
     right: 53px;
   }
 
-  #home .fa-chevron-left{
+  #home .fa-chevron-left,
+  #services .fa-chevron-left{
     left: 53px;
   }
 
@@ -653,6 +666,38 @@
     text-align: center;
   }
 
+  #services .accordion-content #first-service,
+  #services .accordion-content #second-service,
+  #services .accordion-content #third-service,
+  #services .accordion-content #fourth-service,
+  #services .accordion-content #fifth-service{
+    display: none;
+  }
+
+  #services .accordion-content h3 {
+    margin-bottom: 10px;
+  }
+
+  #services .service-subpages{
+    text-align: center;
+  }
+
+  #services .service-subpages .heading-image{
+    padding: 0 15px;
+    margin-top: 20px;
+  }
+  @media (min-width: 768px){
+    padding: 0;
+    margin-top: 0;
+  }
+  @media (min-width: 1024px){
+    #services .service-subpages{
+      text-align: left;
+    }
+    #services .service-subpages .second-col{
+      padding-top: 62px;
+    }
+  }
 
   #services .services-desc {
     background: #f9f9f9;
@@ -668,17 +713,36 @@
   }
 
   #services .owl-theme .owl-nav [class*=owl-] {
-    border-radius: 2px;
-    font-size: 16px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    padding: 0;
+    background: none;
   }
+
+  #services .owl-theme .owl-nav{
+    display: none;
+  }
+
+  @media (min-width: 768px){
+    #services .owl-theme .owl-nav{
+      display: block;
+    }
+  }
+
 
   #services .owl-theme .owl-item .feature-thumb{
     margin-bottom: 0;
+  }
+
+  #services .owl-services{
+    position: relative;
+  }
+
+  #services .owl-services .fa-chevron-right{
+    right: -10px;
+    color: #4682B4;
+  }
+
+  #services .owl-services .fa-chevron-left {
+    left: -10px;
+    color: #4682B4;
   }
 
   .services-thumb {
@@ -843,11 +907,12 @@
     height: 50px;
   }
 
-  #contact-form input[type='submit'] {
+  #contact-form button[type='submit'] {
     border: 1px solid transparent;
+    height: 50px;
   }
 
-  #contact-form input[type='submit']:hover {
+  #contact-form button[type='submit']:hover {
     background: transparent;
     border-color: #ffffff;
     color: #ffffff;
@@ -967,6 +1032,68 @@
     margin-top: 20px;
   }
 
+  /*--------------------------------------
+  Dowloads
+  ----------------------------------------*/
+  #downloads .section-title h2 {
+    text-align: center;
+  }
+
+  #downloads .section-btn {
+    color: black;
+    width: 55%;
+    border: 1px solid #333;
+    display: block;
+    padding: 7px 30px;
+    border-radius: 4px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #downloads .section-btn:hover {
+    background: #4F94CD;
+    border-color: gray;
+    color: #ffffff;
+  }
+
+  #downloads .col-sm-6 {
+    text-align: center;
+  }
+
+  #downloads .col-sm-6 h3 {
+    margin-top: 10px;
+  }
+
+  #downloads .col-sm-6 p{
+    margin: 20px 0;
+  }
+
+  @media (min-width: 768px) {
+    #downloads .col-sm-4 {
+      width: 30%;
+      margin-left: 10%;
+    }
+
+    #downloads .col-sm-6 h3 {
+      margin-top: 0;
+    }
+
+    #downloads .col-sm-6 {
+      text-align: left;
+    }
+
+    #downloads .section-btn {
+      margin: 20px 0 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    #downloads .col-sm-6 {
+      margin-top: 30px;
+    }
+  }
+
+ 
 
 
   /*---------------------------------------
@@ -1010,7 +1137,7 @@
      RESPONSIVE STYLES              
   -----------------------------------------*/
 
-  @media screen and (max-width: 1170px) {
+  @media screen and (max-width: 1200px) {
     .custom-navbar .navbar-nav.navbar-nav-first {
       margin-left: inherit;
     }
