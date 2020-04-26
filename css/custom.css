@@ -506,13 +506,13 @@
 
   @media (min-width: 768px) {
     .feature-thumb {
-      min-height: 401px;
+      min-height: 481px;
     }
   }
 
   @media (min-width: 1024px) {
     .feature-thumb {
-      min-height: 358px;
+      min-height: 427px;
     }
   }
 
@@ -598,13 +598,13 @@
 
   @media (min-width: 768px) {
      .about-detail  {
-      min-height: 256px;
+      min-height: 544px;
     }
   }
 
   @media (min-width: 1024px) {
      .about-detail  {
-      min-height: 178px;
+      min-height: 298px;
     }
   }
 
