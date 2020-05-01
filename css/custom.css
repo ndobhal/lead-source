@@ -873,6 +873,14 @@
     color: #4F94CD;
   }
 
+  .success-author span {
+    font-weight: bold;
+  }
+
+  .success-author h4 {
+    margin-bottom: 4px;
+  }
+
   .success-image,
   .success-desc {
     display: inline-block;
