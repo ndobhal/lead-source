@@ -72,12 +72,35 @@
 
       if(!($(this).parents('.services-wrapper').find($('#'+serviceType)).css('display') === 'block')){
         $('#services').find('.services-wrapper .service-subpages').slideUp();
+        $(this).parents('.services-wrapper').find('.services-menu a').removeClass('active');
+        $(this).parents('.services-wrapper').find('.services-menu').find("[data-class='" + serviceType + "']").addClass('active');
+
         $(this).parents('.services-wrapper').find($('#'+serviceType)).slideDown('slow');
+        setTimeout (()=>{
+          $('#services').find('.services-menu').css('display','block');
+        },200)
         $('html, body').animate({
           'scrollTop' : $('.accordion-content').offset().top - 110
         });
       } else {
         $(this).parents('.services-wrapper').find($('#'+serviceType)).slideUp('slow'); 
+        setTimeout (()=>{
+          $('#services').find('.services-menu').css('display','none');
+          $(this).parents('.services-wrapper').find('.services-menu a').removeClass('active');
+        },200)
+      }
+    });
+
+    //
+    $('#services .accordion-content').on('click','.services-menu a', function(e){
+      e.preventDefault();
+      let serviceType = $(this).data('class');
+
+      $(this).parents('.services-wrapper').find('.services-menu a').removeClass('active');
+      $(this).addClass('active');
+      if(!($(this).parents('.services-wrapper').find($('#'+serviceType)).css('display') === 'block')){
+        $('#services').find('.services-wrapper .service-subpages').hide();
+        $(this).parents('.services-wrapper').find($('#'+serviceType)).show();
       }
     });
 
