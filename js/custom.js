@@ -43,7 +43,7 @@
       animateOut: 'fadeOut',
       loop: true,
       autoplayHoverPause: true,
-      autoplay: true,
+      autoplay: false,
       smartSpeed: 2000,
       dots: false,
       responsiveClass: true,

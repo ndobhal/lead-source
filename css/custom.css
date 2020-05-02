@@ -506,13 +506,13 @@
 
   @media (min-width: 768px) {
     .feature-thumb {
-      min-height: 481px;
+      min-height: 375px;
     }
   }
 
   @media (min-width: 1024px) {
     .feature-thumb {
-      min-height: 427px;
+      min-height: 377px;
     }
   }
 
@@ -753,6 +753,7 @@
 
   #services .owl-theme .owl-item .feature-thumb{
     margin-bottom: 0;
+    padding: 30px 20px;
   }
 
   #services .owl-services{
